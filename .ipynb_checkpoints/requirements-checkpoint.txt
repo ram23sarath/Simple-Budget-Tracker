@@ -1,0 +1,98 @@
+Project: Simple Budget Tracker
+The core idea is to create a web application where a user can log their income and expenses. The app will calculate and display the total income, total expenses, and the remaining balance. All data will be saved in the user's browser using localStorage.
+
+Phase 1: Core Functionality (The Basics)
+This phase focuses on getting the main features working. Don't worry about saving the data yet.
+
+Requirements:
+HTML Structure:
+
+A heading for the application title (e.g., "Budget Tracker").
+
+A display section to show Total Income, Total Expenses, and Current Balance.
+
+A form for adding a new transaction. This form should include:
+
+An input field for the transaction description (e.g., "Salary", "Groceries").
+
+An input field for the transaction amount. This should be a number type.
+
+A select dropdown or radio buttons to choose the transaction type: "Income" or "Expense".
+
+A "Add Transaction" button.
+
+A section to display the list of all transactions added.
+
+CSS Styling:
+
+Apply clean and user-friendly styling. Make it easy to distinguish between income (e.g., green text) and expenses (e.g., red text).
+
+Use Flexbox or Grid for layout to ensure it's responsive.
+
+JavaScript Logic:
+
+Create an array to store all transaction objects. Each object should look something like this: { id: Date.now(), description: 'Coffee', amount: 5, type: 'expense' }.
+
+Add an event listener to the form. When the form is submitted:
+
+Prevent the default form submission behavior.
+
+Get the values from the input fields.
+
+Create a new transaction object and add it to your transactions array.
+
+Clear the input fields.
+
+Create a single function, let's call it updateUI(), that does the following:
+
+It clears the current list of transactions on the screen.
+
+It calculates the total income, total expenses, and the balance based on the transactions array.
+
+It updates the "Total Income," "Total Expenses," and "Current Balance" displays in the HTML.
+
+It loops through the transactions array and displays each one as a list item in the transaction list section.
+
+Call updateUI() every time a new transaction is added.
+
+Phase 2: Data Persistence with localStorage
+Now, let's make sure the data isn't lost when the user reloads the page.
+
+Requirements:
+Saving to localStorage:
+
+Whenever a new transaction is added (or later, deleted), save the entire transactions array to localStorage.
+
+You'll need to convert the array to a JSON string using JSON.stringify() before saving.
+
+Loading from localStorage:
+
+When the page first loads, check if there is any transaction data in localStorage.
+
+If there is, retrieve the JSON string, parse it back into an array using JSON.parse(), and use this data to populate your transactions array.
+
+Finally, call your updateUI() function to display the loaded data on the screen.
+
+Phase 3: Enhancements (The Next Level)
+Once the above is working, you can add these features to push your skills.
+
+Requirements:
+Delete Transactions:
+
+Add a "delete" button (e.g., an 'X') next to each transaction in the list.
+
+When a delete button is clicked, remove the corresponding transaction object from the array.
+
+Update localStorage with the new, smaller array.
+
+Call updateUI() to re-render the screen.
+
+Hint: Use event delegation on the transaction list to handle clicks efficiently.
+
+Filter Transactions:
+
+Add "All," "Income," and "Expense" buttons or a dropdown.
+
+When a filter is selected, display only the matching transactions from your list without deleting the others from your main array.
+
+Go ahead and start building Phase 1. Once you're happy with it, share your code (HTML, CSS, and JS), and I'll review it and provide feedback before you move on to the next phases. Good luck! 👍
