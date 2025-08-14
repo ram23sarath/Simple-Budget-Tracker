@@ -1,6 +1,10 @@
 body {
-    text-align: center;
-    flex: auto;
+    background-image: url(background.avif);
+    text-align: center;  
+    background-repeat: no-repeat;
+    background-size: cover; /* or contain */
+    background-position: center;
+
 }
 
 #title-el {
@@ -8,11 +12,11 @@ body {
 }
 
 #description {
-    border-color: chocolate;
-    background: none;
+    border-color: rgb(255, 0, 0);
+    color: black;
+    font-weight: bold;
+    background:rgb(255, 0, 0)
 }
-
-
 
 #credit-selector {
     color: green;
