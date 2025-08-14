@@ -1,9 +1,22 @@
+// Header elements
+const titleEl = document.getElementById('title-el');
+const incomeAmountEl = document.getElementById('income-amount');
+const expenseAmountEl = document.getElementById('expense-amount');
+const balanceAmountEl = document.getElementById('balance-amount');
 
+// Form inputs
+const transactionDescInput = document.getElementById('transaction-desc');
+const transactionAmtInput = document.getElementById('transaction-amt');
+const transactionTypeSelect = document.getElementById('type');
 
-let creditSelector = document.getElementById("credit-selector")
-let expenseSelector = document.getElementById("expense-selector")
-let saveTransaction = document.getElementById("save-btn")
-//const totalAmountFromLocalStorage = JSON.parse(localStorage.getItem("****"))
+// Button
+const saveBtn = document.getElementById('save-btn');
+
+// Transaction list
+const transactionList = document.getElementById('transaction-list');
+
+// Optional: Form container (if needed for event delegation or styling)
+const transactionForm = document.querySelector('.transaction-form');
 
 
 let allTransactions = []
