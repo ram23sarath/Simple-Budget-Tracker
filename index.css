@@ -1,8 +1,23 @@
 body {
     text-align: center;
-    padding: 50px;
+    flex: auto;
 }
 
-title-el {
+#title-el {
     color: blue;
+}
+
+#description {
+    border-color: chocolate;
+    background: none;
+}
+
+
+
+#credit-selector {
+    color: green;
+}
+
+#expense-selector {
+    color: red;
 }
