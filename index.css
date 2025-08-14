@@ -1,21 +1,63 @@
+/* General body styling */
 body {
-    background-image: url(background.avif);
-    text-align: center;  
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('background.avif');
     background-repeat: no-repeat;
-    background-size: cover; /* or contain */
+    background-size: cover;
     background-position: center;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
 }
 
+/* Title styling */
 #title-el {
     color: blue;
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
-#description {
+/* Container for transaction inputs */
+.transaction-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* semi-transparent background */
+    border-radius: 10px;
+}
+
+/* Common input styling */
+input[type="text"], select {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 200px;
+}
+
+/* Specific element styles */
+#transaction-desc {
     border-color: rgb(255, 0, 0);
     color: black;
     font-weight: bold;
-    background:rgb(255, 0, 0)
+    background-color: rgb(255, 0, 0);
+}
+
+#transaction-amt {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-color: rgb(255, 0, 0);
+    color: black;
+    font-weight: bold;
+    background-color: rgb(0, 255, 13);
 }
 
 #credit-selector {
@@ -26,8 +68,21 @@ body {
     color: red;
 }
 
+/* Button styling */
 #save-btn {
-    background: none;
-    color: green;
     background-color: black;
+    color: green;
+    
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#save-btn:hover {
+    background-color: #333;
 }
