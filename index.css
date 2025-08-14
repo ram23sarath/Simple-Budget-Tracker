@@ -1,4 +1,8 @@
 body {
     text-align: center;
+    padding: 50px;
 }
 
+title-el {
+    color: blue;
+}

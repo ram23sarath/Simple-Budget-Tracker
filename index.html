@@ -6,11 +6,20 @@
     <title>Simple Budget Tracker</title>
 </head>
 <body>
-    <h1>This is a simple Budget Tracker App<h1>
+    <h1 id="title-el">This is a simple Budget Tracker App<h1>
     <h2 id="total-income">Total Income: Rs.</h2>
     <h2 id="total-expenses">Total Expenses: Rs.</h2>
     <h2 id="Current-balance">Current Balance -  Rs.</h2>
-    <input type="text" name="description" id="description" placeholder="enter description">
-    
+    <input type="text" name="description" id="description" placeholder="Enter description">
+    <label for="type"></label>
+    <select id="type" name="type">
+    <option value="volvo">Credit</option>
+    <option value="saab">Expenditure</option>
+    </select>
+    <button type="button">Save Transaction</button>
+    <p>Transaction List:</p>
+
+
+    <script src="index.js"></script>
 </body>
 </html>
