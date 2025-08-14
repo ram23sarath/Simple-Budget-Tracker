@@ -5,8 +5,7 @@ const expenseAmountEl = document.getElementById('expense-amount');
 const balanceAmountEl = document.getElementById('balance-amount');
 
 // Form inputs
-const transactionDescInput = document.getElementById('transaction-desc');
-const transactionAmtInput = document.getElementById('transaction-amt');
+
 const transactionTypeSelect = document.getElementById('type');
 
 // Button
@@ -15,17 +14,37 @@ const saveBtn = document.getElementById('save-btn');
 // Transaction list
 const transactionList = document.getElementById('transaction-list');
 
-// Optional: Form container (if needed for event delegation or styling)
-const transactionForm = document.querySelector('.transaction-form');
-
 
 let allTransactions = []
 
-saveTransaction.addEventListener("submit", function () {
-    event.preventDefault(); 
-    const transactionDescription = document.getElementById("transaction-desc").value
-    const transactionAmount = document.getElementById("transaction-amt").value
-})
+saveBtn.addEventListener("click", (event) => {
+    event.preventDefault();
+    const transactionDescInput = document.getElementById('transaction-desc');
+    const transactionAmtInput = document.getElementById('transaction-amt'); 
+    const transactionType = transactionTypeSelect.value;
+    const transactionDesc = transactionDescInput.value;
+    transactionDescInput.value = '';
+    const transactionAmt = parseFloat(transactionAmtInput.value);
+    transactionAmtInput.value = '';
+    if (transactionDesc && !isNaN(transactionAmt)) {
+        const transaction = {
+            desc: transactionDesc,
+            amt: transactionAmt,
+            type: transactionType
+        };
+        allTransactions.push(transaction);
+        renderdata(allTransactions);
+    } else {
+        alert("Please enter a valid description and amount.");
+    }
+    transactionDescInput.focus();
+
+});
+
+function updateUI() {
+    
+}
+
 
 function renderdata(args) {
     
