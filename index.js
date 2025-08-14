@@ -42,8 +42,29 @@ saveBtn.addEventListener("click", (event) => {
 });
 
 function updateUI() {
-    
+    let totalIncome = 0;
+    let totalExpenses = 0;
+    let balance = 0;
+
+    allTransactions.forEach((transaction) => {
+        if (transaction.type === "income") {
+            totalIncome += transaction.amt;
+        } else {
+            totalExpenses += transaction.amt;
+        }
+    });
+
+    balance = totalIncome - totalExpenses;
+
+    incomeAmountEl.textContent = totalIncome.toFixed(2);
+    expenseAmountEl.textContent = totalExpenses.toFixed(2);
+    balanceAmountEl.textContent = balance.toFixed(2);
+
+    updateUI();
 }
+
+
+
 
 
 function renderdata(args) {
