@@ -21,3 +21,9 @@ body {
 #expense-selector {
     color: red;
 }
+
+#save-btn {
+    background: none;
+    color: green;
+    background-color: black;
+}
