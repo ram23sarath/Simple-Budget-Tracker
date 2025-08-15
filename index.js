@@ -60,7 +60,15 @@ function updateUI() {
     expenseAmountEl.textContent = totalExpenses.toFixed(2);
     balanceAmountEl.textContent = balance.toFixed(2);
 
-    updateUI();
+    transactionList.innerHTML = '';
+
+    allTransactions.forEach((transaction) => {
+        const listItem = document.createElement('li');
+        listItem.textContent = `${transaction.desc} - ${transaction.amt.toFixed(2)} (${transaction.type})`;
+        transactionList.appendChild(listItem);
+    });
+    titleEl.textContent = `Transaction Tracker - ${allTransactions.length} Transactions`;
+    
 }
 
 
