@@ -67,8 +67,11 @@ function updateUI() {
         listItem.textContent = `${transaction.desc} - ${transaction.amt.toFixed(2)} (${transaction.type})`;
         transactionList.appendChild(listItem);
     });
+    // Update the title with the number of transactions
     titleEl.textContent = `Transaction Tracker - ${allTransactions.length} Transactions`;
-    
+    // Update the title with the total balance
+    titleEl.textContent += ` | Total Balance: ${balance.toFixed(2)}`;
+
 }
 
 
