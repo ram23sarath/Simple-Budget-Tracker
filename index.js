@@ -68,6 +68,7 @@ function updateUI() {
         transactionList.appendChild(listItem);
     });
 }
+//Ensure updateUI() is called every time a new transaction is added (inside the form event handler).
 
 
 
